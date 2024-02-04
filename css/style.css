@@ -312,8 +312,17 @@ span {
     justify-content: center;
     align-items: center;
 }
+
+.about-img-inner {
+    width: 350px; 
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .about-img-inner img{
-    height: 70%;
+    height: 75%;
     width: 70%;
 }
 
@@ -338,7 +347,6 @@ span {
   
 .skill-inner {
   width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -347,29 +355,24 @@ span {
 
 .skill-header {
   width: 100%;
-  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .skill-images {
-  max-width: 900px;
   width: 100%;
-  height: 80%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-left: 100px;
-  /* flex-wrap: wrap; 
-  justify-content: space-evenly;
-  align-content: space-evenly;  */
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
+  align-items: center;
 }
 
 .skill-img {
+  flex: 0 0 calc(33.33% - 20px); /* Distribute items into 3 equal parts with 20px margin */
   height: 150px;
   width: 150px;
   display: flex;
-  cursor: pointer;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
@@ -379,7 +382,7 @@ span {
 
 .skill-img > img {
   height: 120px;
-    width: 120px;
+  width: 120px;
 }
 
 .skill-img:hover {
@@ -795,21 +798,8 @@ span {
     }
 
     .about-img img {
-        width: 70vw;
+        width: 60vw;
         margin-top: -2rem;
-    }
-
-    .testimonial-container .testimonial-wrapper {
-        padding: 5rem 0;
-    }
-
-    .testimonial-content .testimonial-slide {
-        padding: 3rem 2rem;
-    }
-
-    .testimonial-box .swiper-button-next,
-    .testimonial-box .swiper-button-prev {
-        display: none;
     }
 }
 
